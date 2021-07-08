@@ -1,0 +1,67 @@
+<style type="text/css">
+  .centerDiv
+  {
+    width: 60%;
+    height:200px;
+    margin: 0 auto;
+   margin-top: 50px;
+    
+  }
+  .navbar {
+    background-color: #aed581;
+
+      padding: 40px 16px;
+  }
+ 
+  header {
+background-color: #aed581;
+padding: 30px;
+text-align: center;
+font-size: 35px;
+color:#000000;
+}
+  </style>
+<header>
+  <h2>Employer form </h2>
+</header>
+
+
+
+
+<div class="centerDiv">
+
+    <form [formGroup]="Submit1" (ngSubmit)="onSubmit()">
+        <div class="container">
+          <label class="col-md-4"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" formControlName="Name" required>
+      
+          <label class="col-md-4"><b>Address</b></label>
+          <input type="text" placeholder="Enter Address" formControlName="Address" required>
+      
+          <label class="col-md-4"><b>Phone number</b></label>
+          <input type="text" placeholder="Enter Phone number" formControlName="Phonenum" required>
+      
+          <label class="col-md-4"><b>Email Address</b></label>
+          <input type="text" placeholder="Enter Email Address" formControlName="Email" required>
+      
+      
+          <label class="col-md-4"><b>Enter Employer Information</b></label>
+          <input type="text" placeholder="Enter Loan Amount" formControlName="LoanAmount" required>
+      
+          <!-- <textarea placeholder="Enter Password" formControlName="Password" name="psw" required></textarea> -->
+        
+          <div class="text-center">
+              <button type="submit" value="submit1" class="cta text-center">Submit</button>
+          </div> 
+        </div>
+        <!-- <div *ngIf="submitted" class="results">
+            <div *ngIf="success">
+               <label class="col-md-4" for="EmployerId"><b>Login successful!</b></label>
+            </div> 
+        </div> -->
+      </form>
+
+</div>
+
+
+

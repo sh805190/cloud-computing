@@ -1,0 +1,61 @@
+
+  <style type="text/css">
+    .centerDiv
+    {
+      width: 60%;
+      height:200px;
+      margin: 0 auto;
+     margin-top: 50px;
+      
+    }
+    .navbar {
+      background-color: #aed581;
+  
+        padding: 40px 16px;
+    }
+   
+    header {
+  background-color: #aed581;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color:#000000;
+}
+    </style>
+<header>
+    <h2>Broker Form</h2>
+  </header>
+
+
+<div class="centerDiv">
+    <form [formGroup]="submitTwoForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+          <label class="col-md-8"><b>Mortage application number</b></label>
+          <input type="text" placeholder="Enter Mortage application number" formControlName="mortgaeId" required>
+      
+          <label class="col-md-4"><b>Address of broker</b></label>
+          <br>
+          <textarea class="col-md-12" formControlName="address"></textarea>    
+          <br>  
+    
+          <label class="col-md-4"><b>AcceptedToShareInfo</b></label>
+          <select id="inputstate" class="form-control">
+            <option selected>ShareInfo..?</option>
+            <option *ngFor="let item of states"[value]="item">{{item}}</option>
+          </select>
+          <!-- <button ng-click="count = count + 1" ng-init="count=0">
+              Increment
+            </button>
+            <span>
+              count: {{count}}
+            </span> -->
+          <div class="text-center">
+            <button type="submit" value="submit2" class="cta">Submit</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button (click)="handleClick()" type="button">Employer</button>
+          </div>
+        </div>
+      </form>
+
+</div>
+

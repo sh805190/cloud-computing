@@ -1,0 +1,99 @@
+<!-- 
+ <form [formGroup]="LoginBox" (ngSubmit)="onSubmit()">
+ 
+     <label>
+        <label class="col-md-4">Employer Id</label>
+        <input type="text" formControlName="EmployerId">
+        <div *ngIf="submitted && LoginBox.controls.EmployerId.errors" class="error1">
+          <div *ngIf="LoginBox.controls.EmployerId.errors.required">Your id is required</div>
+        </div>      
+     </label>
+
+     <label>
+      Password:
+      <input type="text" formControlName="Password">
+      <div *ngIf="submitted && LoginBox.controls.Password.errors" class="error2">
+        <div *ngIf="LoginBox.controls.Password.errors.required">Your password is required</div>
+      </div>
+    </label>
+
+     <input type="submit" value="Login" class="cta">
+   
+   </form>
+ 
+   <div *ngIf="submitted" class="results">
+     <div *ngIf="success">
+        <h5 >Login successful!</h5>
+     </div> -->
+      
+     <!-- <strong>EmployerId:</strong> 
+     <span>{{ LoginBox.controls.EmployerId.value }}</span>
+ 
+     <strong>Password:</strong> 
+     <span>{{ LoginBox.controls.Password.value }}</span> -->
+   <!-- </div> -->
+
+
+   <style type="text/css">
+    .centerDiv
+    {
+      width: 60%;
+      height:200px;
+      margin: 0 auto;
+     margin-top: 50px;
+      
+    }
+    .navbar {
+      background-color: #aed581;
+  
+        padding: 40px 16px;
+    }
+   
+    header {
+  background-color: #aed581;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color:#000000;
+}
+    </style>
+<header>
+    <h2>Employer Login</h2>
+  </header>
+
+
+   <div class="centerDiv">
+
+      <form [formGroup]="LoginBox" (ngSubmit)="onSubmit()">
+          <div class="container">
+            <label class="col-md-4" for="EmployerId"><b>EmployerId</b></label>
+            <input type="text" placeholder="Enter EmployerId" formControlName="EmployerId" name="uname" required>
+        
+            <label class="col-md-4" for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" formControlName="Password" name="psw" required>
+            <div class="text-center">    
+              <button type="submit" value="Login" class="cta">Login</button>
+            </div>
+          </div>
+        
+          <div class="row"  *ngIf="showMsg">
+            <div class="col-xs-12">
+              <p class="alert alert-success">
+                  <strong>Login Success!</strong>
+        
+              </p>
+            </div>
+          </div>
+        
+        
+          <div *ngIf="submitted" class="results">
+              <div class="text-center" *ngIf="success">
+                 <label id="result" for="EmployerId"><b>Login successful!</b></label>
+              </div> 
+          </div>
+        </form>
+        
+
+    </div>
+
+
